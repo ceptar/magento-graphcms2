@@ -1,0 +1,11 @@
+fragment Banner on Banner {
+  heroAsset: bannerAsset {
+    ...Asset
+  }
+  copy {
+    raw
+  }
+  bannerLink {
+    ...PageLink
+  }
+}
