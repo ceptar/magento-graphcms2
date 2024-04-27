@@ -94,6 +94,7 @@
     "@graphcommerce/typescript-config-pwa": "8.0.5-canary.4",
     "@lingui/cli": "4.7.0",
     "@playwright/test": "1.41.0",
+    "@tsconfig/node18": "^18.2.4",
     "@types/node": "^18",
     "@types/react": "^18.2.74",
     "@types/react-dom": "^18.2.24",

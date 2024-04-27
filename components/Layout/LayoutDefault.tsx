@@ -72,28 +72,34 @@ export function LayoutDefault(props: LayoutDefaultProps) {
           className={classes.header}
           sx={(theme) => ({
             zIndex: theme.zIndex.appBar - 1,
-            display: 'flex',
-            // gridTemplateColumns: `auto 1fr auto auto`,
+            display: 'grid',
+// justifyContent: 'flex-end',
+          gridTemplateColumns: 'max-content 1fr auto',
             gap: theme.page.horizontal,
             px: theme.page.horizontal,
             height: theme.appShell.headerHeightMd,
 
+
+
             pointerEvents: 'none',
             '& > *': {
               pointerEvents: 'all',
+              maxWidth: '50vw',
+              minWidth: '80px',
             },
             [theme.breakpoints.up('md')]: {},
             '&.sticky': {
               [theme.breakpoints.down('md')]: {
                 position: 'sticky',
+
               },
             },
           })}
         >
           {header}
         </Box>
-        {/* floating sticky menubuttons */}
-        {menuFab || cartFab ? (
+     {/* floating sticky menubuttons */}
+     {menuFab || cartFab ? (
           <Box
             className={classes.fabs}
             sx={(theme) => ({
