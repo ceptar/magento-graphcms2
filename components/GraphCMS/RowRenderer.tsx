@@ -1,6 +1,6 @@
 import { LazyHydrate, RenderType, TypeRenderer } from '@graphcommerce/next-ui'
 import { RowBlogContent } from '../Blog'
-import { Banner } from './Banner/Banner'
+import { RowHeroBannerCopy } from './Banner/Banner'
 import { PageContentQueryFragment } from './PageContentQueryFragment.gql'
 import { RowButtonLinkList } from './RowButtonLinkList/RowButtonLinkList'
 import { RowColumnOne } from './RowColumnOne/RowColumnOne'
@@ -21,7 +21,7 @@ const defaultRenderer: Partial<ContentTypeRenderer> = {
   RowColumnOne,
   RowColumnTwo,
   RowColumnThree,
-  Banner,
+  RowHeroBannerCopy,
   // RowHeroBanner,
   RowSpecialBanner,
   RowQuote,

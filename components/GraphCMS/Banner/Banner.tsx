@@ -1,42 +1,42 @@
 import { RichText } from '@graphcommerce/graphcms-ui'
 import { breakpointVal } from '@graphcommerce/next-ui'
 import { Box, Button } from '@mui/material'
-import { BannerFragment } from './Banner.gql'
+import { RowHeroBannerCopyFragment } from './Banner.gql'
 import { BannerLayout } from './BannerLayout'
 
-export function Banner(props: BannerFragment) {
-  const { heroAsset, copy, bannerLink } = props
+export function RowHeroBannerCopy (props: RowHeroBannerCopyFragment) {
+  const { heroAsset, copy, pageLinks } = props
 
   return (
     <BannerLayout
-      bannerLink={bannerLink.map(({ url, title }) => (
+      bannerLink={pageLinks.map(({ url, title }) => (
         <Button key={url} href={url} variant='contained' size='large' color='primary'>
           {title}
         </Button>
       ))}
       imageSrc={heroAsset.url}
       sx={(theme) => ({
-        '& .BannerLayout-copy': {
-          minHeight: { xs: 'min(100%,600px)', md: 'min(100%,1080px)' },
-          // height: `calc(100vh - ${theme.appShell.headerHeightMd})`,
-          width: '100%',
-
-          [theme.breakpoints.up('sm')]: {
-            // display: 'flex', // Apply Flexbox
-            // justifyContent: 'flex-end', // Align right
-            padding: theme.spacings.xl,
-            justifyItems: 'start',
-            alignContent: 'center',
-            textAlign: 'left',
-            width: '50%',
+        '& .RowHeroBannerCopy-copy': {
+            minHeight: { xs: 'min(100%,600px)', md: 'min(100%,1080px)' },
+            // height: `calc(100vh - ${theme.appShell.headerHeightMd})`,
+            width: '100%',
+  
+            [theme.breakpoints.up('sm')]: {
+              // display: 'flex', // Apply Flexbox
+              // justifyContent: 'flex-end', // Align right
+              padding: theme.spacings.xl,
+              justifyItems: 'start',
+              alignContent: 'center',
+              textAlign: 'left',
+              width: '50%',
+            },
           },
-        },
-        '& .BannerLayout-image': {
-          objectFit: 'cover',
-          objectPosition: 'right',
-        },
-      })}
-    >
+          '& .BannerLayout-image': {
+            objectFit: 'cover',
+            objectPosition: 'right',
+          },
+        })}
+        >
       <RichText
         {...copy}
         sxRenderer={{

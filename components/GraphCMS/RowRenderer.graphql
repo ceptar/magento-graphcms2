@@ -4,7 +4,7 @@ fragment RowRenderer on Page @inject(into: ["HygraphPage"]) {
     ... on Node {
       id
     }
-    ...Banner
+    ...RowHeroBannerCopy
     ...RowColumnOne
     ...RowColumnTwo
     ...RowColumnThree

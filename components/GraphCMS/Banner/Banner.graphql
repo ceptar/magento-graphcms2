@@ -1,11 +1,11 @@
-fragment Banner on Banner {
-  heroAsset: bannerAsset {
+fragment RowHeroBannerCopy on RowHeroBannerCopy {
+  heroAsset: asset {
     ...Asset
   }
   copy {
     raw
   }
-  bannerLink {
+  pageLinks {
     ...PageLink
   }
 }
