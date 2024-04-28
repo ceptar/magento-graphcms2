@@ -62,11 +62,11 @@ export function LayoutNavigation(props: LayoutNavigationProps) {
             >
               <Trans id='Search...' />
             </SearchLink>,
-
+            { id: 'home', name: <Trans id='Home' />, href: '/' },
 
             ...magentoMenuToNavigation(menu, true),
             { id: 'blog', name: 'Blog', href: '/blog' },
-            // <Divider sx={(theme) => ({ my: theme.spacings.xs })} />,
+            <Divider sx={(theme) => ({ my: theme.spacings.xs })} />,
             <CustomerMenuFabItem
               onClick={() => selection.set(false)}
               key='account'
@@ -96,43 +96,23 @@ export function LayoutNavigation(props: LayoutNavigationProps) {
           variantMd='left'
           sizeMd='full'
           justifyMd='start'
-          itemWidthMd='40vw'
+          itemWidthMd='400px'
           mouseEvent='hover'
           itemPadding='md'
         />
       </NavigationProvider>
 
       <LayoutDefault
-        {...uiProps}
         noSticky={router.asPath.split('?')[0] === '/'}
         header={
-
           <>
 
+              <Logo />
 
-
-            <Logo 
-          
-            />
-
-<Box 
-sx={{
-  zIndex: '1000',
-  pointerEvents: 'none',
-}}
-/>
-
-
-
-            <DesktopNavActions
-                          sx={(theme) => ({
-
-                            columnGap: theme.spacings.xxs,
-                            paddingLeft: theme.spacings.sm,
-                            paddingRight: theme.spacings.sm,
-                          })}>
-  
- 
+            <Box>
+              <PlaceholderFab />
+            </Box>
+            <DesktopNavActions>
               {!router.pathname.startsWith('/search') && (
                 <SearchLink href='/search' aria-label={i18n._(/* i18n */ 'Search...')} />
               )}
@@ -142,9 +122,7 @@ sx={{
               {/* The placeholder exists because the CartFab is sticky but we want to reserve the space for the <CartFab /> */}
               <PlaceholderFab size='large' />
               <PlaceholderFab size='large' />
-           
             </DesktopNavActions>
-
           </>
         }
         footer={<Footer footer={footer} />}
@@ -153,8 +131,6 @@ sx={{
       >
         {children}
       </LayoutDefault>
-
     </>
-
   )
 }

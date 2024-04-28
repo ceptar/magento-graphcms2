@@ -24,12 +24,12 @@ const useUtilityClasses = ({ classes }: LogoClassProps) =>
   composeClasses({ logo: ['logo'], parent: ['parent'] }, getLogoUtilityClass, classes)
 
 const commonLogoStyles: SxProps<Theme> = {
-  height: '100%',
-  width: 'max-content',
+  // height: '100%',
+  width: 'auto',
   display: 'flex',
   alignItems: 'center',
-//   margin: '0 auto',
-marginRight: 'auto',
+  //   margin: '0 auto',
+  // marginRight: 'auto',
   justifyContent: 'center',
   pointerEvents: 'all',
 }
@@ -41,6 +41,7 @@ const LogoContainer = styled(NextLink, {
 })({})
 
 export type LogoProps = {
+
   href?: `/${string}`
   image: ImageProps
   sx?: SxProps<Theme>
@@ -53,7 +54,7 @@ export const Logo = forwardRef<HTMLAnchorElement, LogoProps>((props, ref) => {
 
   const img = (
     <Image
-      layout='fixed'
+      layout='responsive'
       loading='eager'
       {...image}
       className={`${image.className} ${classes?.logo ?? ''}`}

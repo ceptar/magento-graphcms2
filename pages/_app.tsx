@@ -1,3 +1,4 @@
+import { FullscreenBackground } from '../components/Layout/FullScreenBackground'
 import '../public/fonts/fonts.css'
 import { FramerNextPages } from '@graphcommerce/framer-next-pages'
 import { GraphQLProvider } from '@graphcommerce/graphql'
@@ -23,6 +24,7 @@ export default function ThemedApp(props: AppProps) {
             <GlobalHead />
             <CssBaseline />
             <PageLoadIndicator />
+<FullscreenBackground />
             <FramerNextPages {...props} />
           </DarkLightModeThemeProvider>
         </GraphQLProvider>

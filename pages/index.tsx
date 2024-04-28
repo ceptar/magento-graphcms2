@@ -36,6 +36,7 @@ function CmsPage(props: Props) {
 
       {page && (
         <RowRenderer
+        
           content={page.content}
           renderer={{
             RowProduct: (rowProps) => {

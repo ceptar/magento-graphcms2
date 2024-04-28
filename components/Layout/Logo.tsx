@@ -4,20 +4,20 @@ import svgLogo from './graphcommerce.svg'
 export function Logo() {
   return (
     <LogoBase
-    href='/'
+
+    // href='/'
     sx={(theme) => ({
-      marginL: 'auto',
+
         '& .GcLogo-logo': {
+          display: 'flex',
           minHeight: '40px',
           maxHeight: '60px',
-          minWidth: '120px',
-          maxWidth: 'max-content',
-          
+          height: 'auto',
+          width: 'auto',
+          justifyContent: 'space-between',
+          marginRight: 'auto',
 
 
- 
- 
-        
           pointerEvents: 'all',
           // filter: (theme) => (theme.palette.mode === 'dark' ?  'none' : 'invert(100%)'),
         },

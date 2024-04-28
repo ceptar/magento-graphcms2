@@ -16,25 +16,40 @@ export function RowHeroBannerCopy (props: RowHeroBannerCopyFragment) {
       ))}
       imageSrc={heroAsset.url}
       sx={(theme) => ({
+        height: `calc(100vh - ${theme.appShell.headerHeightMd})`,
         '& .BannerLayout-copy': {
-            minHeight: { xs: 'min(100%,600px)', md: 'min(100%,1080px)' },
-            // height: `calc(100vh - ${theme.appShell.headerHeightMd})`,
-            width: '100%',
+        //     // minHeight: { xs: 'min(100%,80vh)', md: 'min(100%,80vh)' },
+        //     // height: `calc(100vh - ${theme.appShell.headerHeightMd})`,
+        //     width: '100%',
   
-            [theme.breakpoints.up('sm')]: {
-              // display: 'flex', // Apply Flexbox
-              // justifyContent: 'flex-end', // Align right
-            //   padding: theme.spacings.xl,
-              justifyItems: 'start',
+        //     [theme.breakpoints.up('sm')]: {
+        //       // display: 'flex', // Apply Flexbox
+        //       // justifyContent: 'flex-end', // Align right
+        //     //   padding: theme.spacings.xl,
+
+        justifyItems: 'start',
               alignContent: 'center',
               textAlign: 'left',
-              width: '50%',
-            },
+              paddingY: '2vh',
+              width: '60%',
+        //     },
           },
           '& .BannerLayout-image': {
+            position: 'absolute',
+            left: 0,
+            top: 0,
+            // marginTop: `calc(${theme.appShell.headerHeightMd} * - 1)`,
+            height: '100vh',
+            width: '100vw',
             objectFit: 'cover',
+            objectPosition: '85% 15%',
+            [theme.breakpoints.down('md')]: {
+
+              objectPosition: '85% 15%',
+            },
+           [theme.breakpoints.up('md')]: {
             objectPosition: 'right',
-          },
+          }},
         })}
         >
       <RichText
@@ -44,7 +59,8 @@ export function RowHeroBannerCopy (props: RowHeroBannerCopyFragment) {
             typography: 'overline',
           },
           'heading-one': (theme) => ({
-            paddingBottom: '5vh',
+            // backgroundColor: '#32d6ea99',
+            paddingBottom: '10vh',
             textTransform: 'uppercase',
             mt: 1,
             mb: theme.spacings.sm,

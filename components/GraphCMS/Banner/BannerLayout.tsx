@@ -36,7 +36,8 @@ export function BannerLayout(props: BannerLayoutProps) {
         className={classes.wrapper}
         sx={(theme) => ({
           display: 'grid',
-          overflow: 'hidden',
+          height: '100%',
+          // overflow: 'hidden',
           borderRadius: responsiveVal(theme.shape.borderRadius * 2, theme.shape.borderRadius * 3),
           isolation: 'isolate',
         })}
@@ -50,7 +51,7 @@ export function BannerLayout(props: BannerLayoutProps) {
             justifyItems: 'center',
             alignContent: 'center',
             textAlign: 'left',
-            p: theme.spacings.md,
+            // p: theme.spacings.md,
             color: theme.palette.secondary.contrastText,
           })}
         >
@@ -61,14 +62,14 @@ export function BannerLayout(props: BannerLayoutProps) {
           className={classes.asset}
           sx={{
             gridArea: '1 / 1',
-            position: 'relative',
+            // position: 'relative',
           }}
         >
           <MotionImage
             src={imageSrc} // Use the image source prop
             alt='Hero banner image' // Provide an alt attribute for accessibility
             className={classes.image} // Use the new class name
-            style={{ scale }}
+            style={{  }}
 
             sx={{
               position: 'absolute',
