@@ -75,7 +75,11 @@ function ProductPage(props: Props) {
     <>
       <AddProductsToCartForm key={product.uid} defaultValues={defaultValues}>
         <LayoutHeader floatingMd>
-          <LayoutTitle size='small' component='span'>
+          <LayoutTitle size='small' component='span'
+          // sx={{
+          //   backgroundColor: '#32D6EA',
+          // }}
+          >
             <ProductPageName product={product} />
           </LayoutTitle>
         </LayoutHeader>

@@ -24,7 +24,7 @@ export function RowHeroBannerCopy (props: RowHeroBannerCopyFragment) {
             [theme.breakpoints.up('sm')]: {
               // display: 'flex', // Apply Flexbox
               // justifyContent: 'flex-end', // Align right
-              padding: theme.spacings.xl,
+            //   padding: theme.spacings.xl,
               justifyItems: 'start',
               alignContent: 'center',
               textAlign: 'left',

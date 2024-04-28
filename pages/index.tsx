@@ -32,7 +32,7 @@ function CmsPage(props: Props) {
         canonical='/'
       />
 
-      <LayoutHeader floatingMd floatingSm />
+      <LayoutHeader floatingMd />
 
       {page && (
         <RowRenderer

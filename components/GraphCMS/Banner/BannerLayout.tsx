@@ -1,5 +1,6 @@
 import { clientSize } from '@graphcommerce/framer-utils'
-import { useScrollY, extendableComponent, responsiveVal, Row } from '@graphcommerce/next-ui'
+import { Row } from '../Row'
+import { useScrollY, extendableComponent, responsiveVal } from '@graphcommerce/next-ui'
 import { ContainerProps, Box, styled, Theme, SxProps } from '@mui/material'
 import { m, useTransform } from 'framer-motion'
 import React from 'react'
@@ -68,7 +69,7 @@ export function BannerLayout(props: BannerLayoutProps) {
             alt='Hero banner image' // Provide an alt attribute for accessibility
             className={classes.image} // Use the new class name
             style={{ scale }}
-            // layout='fill'
+
             sx={{
               position: 'absolute',
               transition: 'transform 0.5s cubic-bezier(0.33, 1, 0.68, 1)',

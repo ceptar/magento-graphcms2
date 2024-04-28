@@ -59,7 +59,7 @@ export function LayoutHeaderContent(props: LayoutHeaderContentProps) {
 
   return (
     <>
-      {/* <Box
+       <Box
         className={classes.bg}
         sx={[
           (theme) => ({
@@ -79,6 +79,7 @@ export function LayoutHeaderContent(props: LayoutHeaderContentProps) {
             '&.sizeSmall': {
               height: theme.appShell.headerHeightSm,
             },
+
             borderTopLeftRadius: switchPoint <= 0 ? theme.shape.borderRadius * 3 : 0,
             borderTopRightRadius: switchPoint <= 0 ? theme.shape.borderRadius * 3 : 0,
 
@@ -97,6 +98,7 @@ export function LayoutHeaderContent(props: LayoutHeaderContentProps) {
             transition: `opacity 150ms`,
             '&.scrolled': {
               opacity: 1,
+ 
             },
             '&.divider': {
               boxSchadow: 0,
@@ -107,8 +109,8 @@ export function LayoutHeaderContent(props: LayoutHeaderContentProps) {
           }),
           ...(Array.isArray(sxBg) ? sxBg : [sxBg]),
         ]}
-      /> */}
-      {/* <Box
+      />
+      <Box
         className={classes.content}
         ref={ref}
         sx={[
@@ -148,8 +150,8 @@ export function LayoutHeaderContent(props: LayoutHeaderContentProps) {
           }),
           ...(Array.isArray(sx) ? sx : [sx]),
         ]}
-      > */}
-        {/* {left && (
+      > 
+         {left && (
           <Box
             className={classes.left}
             sx={(theme) => ({
@@ -165,8 +167,8 @@ export function LayoutHeaderContent(props: LayoutHeaderContentProps) {
               {left}
             </MotionDiv>
           </Box>
-        )} */}
-        {/* <Box
+        )}
+         <Box
           className={classes.center}
           sx={(theme) => ({
             display: 'grid',
@@ -200,8 +202,8 @@ export function LayoutHeaderContent(props: LayoutHeaderContentProps) {
           <MotionDiv sx={{ minWidth: 0 }} layout={layout} layoutDependency={layoutDependency}>
             {children}
           </MotionDiv>
-        </Box> */}
-        {/* <Box
+        </Box> 
+         <Box
           className={classes.right}
           sx={(theme) => ({
             '& > *': {
@@ -218,9 +220,9 @@ export function LayoutHeaderContent(props: LayoutHeaderContentProps) {
           <MotionDiv layout={layout} layoutDependency={layoutDependency}>
             {right}
           </MotionDiv>
-        </Box> */}
-        {/* {divider && (
-          <Box
+        </Box>
+         {divider && (
+            <Box
             className={classes.divider}
             sx={(theme) => ({
               position: 'absolute',
@@ -241,10 +243,10 @@ export function LayoutHeaderContent(props: LayoutHeaderContentProps) {
               },
             })}
           >
-            {divider} */}
-        {/* </Box> */}
-        {/* )} */}
-      {/* </Box> */}
+            {divider}
+         </Box>
+         )}
+       </Box>
     </>
   )
 }

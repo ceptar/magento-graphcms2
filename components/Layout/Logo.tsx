@@ -6,6 +6,7 @@ export function Logo() {
     <LogoBase
     href='/'
     sx={(theme) => ({
+      marginL: 'auto',
         '& .GcLogo-logo': {
           minHeight: '40px',
           maxHeight: '60px',

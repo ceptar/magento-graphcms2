@@ -77,16 +77,16 @@ function CategoryPage(props: CategoryProps) {
             variant='h1'
             // gutterTop
             sx={(theme) => ({
-              marginBottom: category?.description && theme.spacings.md,
+              // marginBottom: category?.description && theme.spacings.md,
               paddingTop: '2px',
               paddingBottom: '2px',
 
               // marginBottom: category?.description && theme.spacings.md,
             })}
-            gutterBottom={
+            // gutterBottom={
               // !isCategory || (!category?.description && category?.children?.length === 0)
-              !isCategory || (!category?.description && category?.children?.length === 0)
-            }
+            //   !isCategory || (!category?.description && category?.children?.length === 0)
+            // }
           >
             {category?.name ?? page.title}
           </LayoutTitle>

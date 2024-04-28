@@ -109,7 +109,7 @@ export function LayoutDefault(props: LayoutDefaultProps) {
               alignItems: 'center',
               // padding: `0 ${theme.page.horizontal}`,
               height: theme.appShell.headerHeightMd,
-              zIndex: 'speedDial',
+
               position: 'sticky',
               top: 0,
               marginTop: `calc(${theme.appShell.headerHeightMd} * -1)`,
@@ -125,6 +125,7 @@ export function LayoutDefault(props: LayoutDefaultProps) {
                 columnGap: theme.spacings.xxs,
                 paddingLeft: theme.spacings.sm,
                 paddingRight: theme.spacings.sm,
+                zIndex: theme.zIndex.appBar - 1,
               })}
             >
               {cartFab}

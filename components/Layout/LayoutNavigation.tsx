@@ -96,7 +96,7 @@ export function LayoutNavigation(props: LayoutNavigationProps) {
           variantMd='left'
           sizeMd='full'
           justifyMd='start'
-          itemWidthMd='30vw'
+          itemWidthMd='40vw'
           mouseEvent='hover'
           itemPadding='md'
         />
@@ -115,7 +115,12 @@ export function LayoutNavigation(props: LayoutNavigationProps) {
           
             />
 
-<Box />
+<Box 
+sx={{
+  zIndex: '1000',
+  pointerEvents: 'none',
+}}
+/>
 
 
 
