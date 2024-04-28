@@ -19,6 +19,9 @@ export function Logo() {
 
 
           pointerEvents: 'all',
+
+            
+          
           // filter: (theme) => (theme.palette.mode === 'dark' ?  'none' : 'invert(100%)'),
         },
 
