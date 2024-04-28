@@ -1,7 +1,7 @@
 import { useScrollOffset } from '@graphcommerce/framer-next-pages'
 import { dvh } from '@graphcommerce/framer-utils'
 import { LayoutProvider, SkipLink, extendableComponent, useFabSize } from '@graphcommerce/next-ui'
-import { Box, SxProps, Theme } from '@mui/material'
+import { Box, SpeedDial, SxProps, Theme } from '@mui/material'
 import { useTransform, useScroll } from 'framer-motion'
 
 export type LayoutDefaultProps = {
@@ -71,7 +71,7 @@ export function LayoutDefault(props: LayoutDefaultProps) {
           component='header'
           className={classes.header}
           sx={(theme) => ({
-            zIndex: theme.zIndex.appBar - 1,
+            // zIndex: theme.zIndex.appBar - 1,
             display: 'grid',
 // justifyContent: 'flex-end',
           gridTemplateColumns: 'max-content 1fr auto',
@@ -109,7 +109,7 @@ export function LayoutDefault(props: LayoutDefaultProps) {
               alignItems: 'center',
               // padding: `0 ${theme.page.horizontal}`,
               height: theme.appShell.headerHeightMd,
-
+              zIndex: 'speedDial',
               position: 'sticky',
               top: 0,
               marginTop: `calc(${theme.appShell.headerHeightMd} * -1)`,
@@ -125,7 +125,7 @@ export function LayoutDefault(props: LayoutDefaultProps) {
                 columnGap: theme.spacings.xxs,
                 paddingLeft: theme.spacings.sm,
                 paddingRight: theme.spacings.sm,
-                zIndex: theme.zIndex.appBar - 1,
+
               })}
             >
               {cartFab}
