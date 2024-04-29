@@ -1,3 +1,4 @@
+
 import { Logo as LogoBase } from './Logoparts'
 import svgLogo from './graphcommerce.svg'
 
@@ -11,7 +12,8 @@ export function Logo() {
         '& .GcLogo-logo': {
           display: 'flex',
           minHeight: '40px',
-          maxHeight: '60px',
+          // maxHeight: '60px',
+          maxWidth: '50vw',
           height: 'auto',
           width: 'auto',
           justifyContent: 'space-between',
