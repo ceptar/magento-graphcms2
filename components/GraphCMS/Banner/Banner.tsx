@@ -40,7 +40,7 @@ export function RowHeroBannerCopy (props: RowHeroBannerCopyFragment) {
             top: 0,
             // marginTop: `calc(${theme.appShell.headerHeightMd} * - 1)`,
             height: '100vh',
-            width: '100vw',
+            width: '100%',
             objectFit: 'cover',
             objectPosition: '85% 15%',
             [theme.breakpoints.down('md')]: {

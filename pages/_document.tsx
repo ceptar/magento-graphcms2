@@ -5,10 +5,12 @@ import { EmotionCacheProps, withEmotionCache } from '@graphcommerce/next-ui'
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
 
 
+
 class Document extends NextDocument<EmotionCacheProps & LinguiDocumentProps> {
   render() {
     return (
       <Html lang={normalizeLocale(this.props.locale)}>
+
         <Head>
 
           {/* Inject MUI styles first to match with the prepend: true configuration. */}
@@ -16,7 +18,9 @@ class Document extends NextDocument<EmotionCacheProps & LinguiDocumentProps> {
           {this.props.emotionStyleTags}
           {this.props.linguiScriptTag}
         </Head>
+
         <body>
+
           <Main />
           <NextScript />
         </body>
