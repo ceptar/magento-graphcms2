@@ -69,8 +69,8 @@ const darkPalette: PaletteOptions = {
     contrastText: '#ffffff',
   },
   background: {
-    default: '#272727',
-    paper: '#424242',
+    default: 'rgba(0, 0, 0, 0.95)',
+    paper: 'rgba(0, 0, 0, 0.87)',
     image: '#ffffff',
   },
   divider: '#ffffff30',
