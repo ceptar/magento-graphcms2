@@ -82,7 +82,7 @@ export function LayoutDefault(props: LayoutDefaultProps) {
 
             pointerEvents: 'none',
             '& > *': {
-              pointerEvents: 'all',
+              // pointerEvents: 'all',
             },
             [theme.breakpoints.up('md')]: {},
             '&.sticky': {
@@ -132,9 +132,9 @@ export function LayoutDefault(props: LayoutDefaultProps) {
           <div />
         )}
         <Box className={classes.children}
-              sx={(theme) => ({
-          backgroundColor: '#FF95AC'
-        })}
+        //       sx={(theme) => ({
+        //   backgroundColor: '#FF95AC'
+        // })}
         >
           <div id='skip-nav' tabIndex={-1} />
           {children}

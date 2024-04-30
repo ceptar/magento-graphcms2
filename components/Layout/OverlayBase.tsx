@@ -113,10 +113,10 @@ export function OverlayBase(incomingProps: LayoutOverlayBaseProps) {
 
   const th = useTheme()
   const mdSpacingTop = (
-    props.mdSpacingTop ?? ((theme) => `calc(${theme.appShell.headerHeightMd} * 0.5)`)
+    props.mdSpacingTop ?? ((theme) => `calc(${theme.appShell.headerHeightMd} * 1)`)
   )(th)
   const smSpacingTop = (
-    props.smSpacingTop ?? ((theme) => `calc(${theme.appShell.headerHeightSm} * 0.5)`)
+    props.smSpacingTop ?? ((theme) => `calc(${theme.appShell.headerHeightMd} * 1)`)
   )(th)
 
   const { scrollerRef, snap, scroll, getScrollSnapPositions, disableSnap } = useScrollerContext()
