@@ -93,7 +93,7 @@ const createThemeWithPalette = (palette: PaletteOptions) =>
     palette,
     ...themeBaseDefaults,
     // border radius
-    shape: { borderRadius: 3 },
+    shape: { borderRadius: 0 },
     typography: {
       fontFamily: '"MetroLight", "Helvetica", "Arial", sans-serif',
       // fontFamily: '"Mulish", "Helvetica", "Arial", sans-serif',
