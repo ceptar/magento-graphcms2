@@ -51,10 +51,10 @@ export function LayoutDefault(props: LayoutDefaultProps) {
       className={`${classes.root} ${className ?? ''}`}
       sx={[
         (theme) => ({
-          minHeight: dvh(100),
-          '@supports (-webkit-touch-callout: none)': {
-            minHeight: '-webkit-fill-available',
-          },
+          // minHeight: dvh(100),
+          // '@supports (-webkit-touch-callout: none)': {
+          //   minHeight: '-webkit-fill-available',
+          // },
           display: 'grid',
           gridTemplateRows: `auto 1fr auto`,
           gridTemplateColumns: '100%',

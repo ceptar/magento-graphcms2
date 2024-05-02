@@ -18,7 +18,7 @@ export type ProductPageGalleryProps = Omit<SidebarGalleryProps, 'sidebar' | 'ima
 }
 
 export function ProductPageGallery(props: ProductPageGalleryProps) {
-  const { product, children, aspectRatio: [width, height] = [0.8, 1], ...sidebarProps } = props
+  const { product, children, aspectRatio: [width, height] = [4, 5], ...sidebarProps } = props
   const { media_gallery } = product
 
   const images =

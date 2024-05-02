@@ -68,7 +68,7 @@ export function ProductListItemImage(props: ImageOrPlaceholderProps) {
         className={classes.image}
         sx={[
           {
-            objectFit: 'contain',
+            objectFit: 'cover',
             aspectRatio: `${aspectRatio[0] / aspectRatio[1]}`,
             display: 'block',
           },

@@ -18,7 +18,7 @@ const config = {
 
   demoMode: true,
   limitSsg: true,
-  // configurableVariantForSimple: true,
+  configurableVariantForSimple: true,
   // configurableVariantValues: { url: true, content: true, gallery: true }
 }
 
