@@ -1,4 +1,5 @@
 import '../public/fonts/fonts.css'
+import '../styles/globals.css'
 
 import { FramerNextPages } from '@graphcommerce/framer-next-pages'
 import { GraphQLProvider } from '@graphcommerce/graphql'

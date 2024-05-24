@@ -107,7 +107,7 @@ export function LayoutNavigation(props: LayoutNavigationProps) {
         header={
           <>
 
-              <Logo />
+              <Logo href='/home'/>
 
             <Box>
               <PlaceholderFab />

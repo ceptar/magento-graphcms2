@@ -17,7 +17,7 @@ import {
   useTransform,
 } from 'framer-motion'
 import React, { useCallback, useEffect, useRef } from 'react'
-import { LayoutProvider, ExtendableComponent, extendableComponent, useMatchMedia } from '@graphcommerce/next-ui'
+import { LayoutProvider, ExtendableComponent, extendableComponent, useMatchMedia, responsiveVal } from '@graphcommerce/next-ui'
 
 export type LayoutOverlayVariant = 'left' | 'bottom' | 'right'
 export type LayoutOverlaySize = 'floating' | 'minimal' | 'full'
@@ -108,7 +108,7 @@ export function OverlayBase(incomingProps: LayoutOverlayBaseProps) {
     safeToRemove,
     overlayPaneProps,
     widthMd = 'max(800px, 50vw)',
-    widthSm = 'max(300px, 80vw)',
+    widthSm = 'max(100%, 80vw)',
   } = props
 
   const th = useTheme()
@@ -275,7 +275,7 @@ export function OverlayBase(incomingProps: LayoutOverlayBaseProps) {
 
     if (!scroller || !isPresent) return
 
-    if (variant() === 'right') document.body.style.overflow = 'hidden'
+    if (variant() === 'left') document.body.style.overflow = 'hidden'
 
     if (position.get() !== OverlayPosition.OPENED && !scroll.animating.get()) {
       // eslint-disable-next-line @typescript-eslint/no-floating-promises
@@ -550,7 +550,7 @@ kein effekt
             ref={overlayPaneRef}
             sx={(theme) => ({
               pointerEvents: 'auto',
-
+              fontSize: responsiveVal(16,30),
               [theme.breakpoints.down('md')]: {
                 minWidth: '80vw',
                 overflowY: 'auto',
@@ -572,7 +572,6 @@ kein effekt
                   },
                   '&.sizeSmFull': {
                     height: dvh(100),
-                    maxHeight: 'none',
                     borderRadius: 0,
                   },
 

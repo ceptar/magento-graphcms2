@@ -8,7 +8,7 @@
 const config = {
   hygraphEndpoint: 'https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clvhbhb63000009ieecbl2zt3/master',
   magentoEndpoint: 'https://nonotheresnolimit.xyz/graphql',
-  canonicalBaseUrl: 'https://discobabes.store/',
+  canonicalBaseUrl: 'https://localhost/',
   storefront: [
     { locale: 'en', magentoStoreCode: 'default', defaultLocale: true },
   ],
@@ -18,7 +18,7 @@ const config = {
 
   demoMode: true,
   limitSsg: true,
-  configurableVariantForSimple: true,
+  // configurableVariantForSimple: true,
   // configurableVariantValues: { url: true, content: true, gallery: true }
 }
 

@@ -20,7 +20,7 @@ const lightPalette: PaletteOptions = {
   mode: 'light',
   primary: {
     main: '#32d6ea',
-    contrastText: 'rgba(0, 0, 0, 0.87)',
+    contrastText: 'rgba(0, 0, 0, 0.90)',
     dark: '#2395A3',
   },
   secondary: {
@@ -29,7 +29,7 @@ const lightPalette: PaletteOptions = {
     contrastText: '#ffffff',
   },
   background: {
-    default: '#F3F3F3',
+    default: '#ffffff',
     paper: '#ffffff',
     image: '#ffffff',
   },
@@ -38,7 +38,7 @@ const lightPalette: PaletteOptions = {
     hoverOpacity: 0.12,
   },
   text: {
-    primary: 'rgba(0, 0, 0, 0.87)',
+    primary: 'rgba(0, 0, 0, 0.90)',
     secondary: 'rgba(0, 0, 0, 0.54)',
     disabled: 'rgba(0, 0, 0, 0.38)',
   },
@@ -60,7 +60,7 @@ const darkPalette: PaletteOptions = {
   mode: 'dark',
   primary: {
     main: '#32d6ea',
-    contrastText: 'rgba(0, 0, 0, 0.87)',
+    contrastText: 'rgba(0, 0, 0, 0.95)',
     dark: '#2395A3',
   },
   secondary: {
@@ -69,9 +69,9 @@ const darkPalette: PaletteOptions = {
     contrastText: '#ffffff',
   },
   background: {
-    default: 'rgba(0, 0, 0, 0.95)',
-    paper: 'rgba(0, 0, 0, 0.87)',
-    image: '#ffffff',
+    default: 'rgba(0, 0, 0, 0.96)',
+    paper: 'rgba(0, 0, 0, 0.96)',
+    image: 'rgb(f, f, f, f, 0.96)',
   },
   divider: '#ffffff30',
   action: {
@@ -82,6 +82,7 @@ const darkPalette: PaletteOptions = {
     secondary: 'rgba(255, 255, 255, 0.7)',
     disabled: 'rgba(255, 255, 255, 0.5)',
   },
+
 }
 
 const fontSize = (from: number, to: number) =>
@@ -93,37 +94,41 @@ const createThemeWithPalette = (palette: PaletteOptions) =>
     palette,
     ...themeBaseDefaults,
     // border radius
-    shape: { borderRadius: 3 },
+    shape: { borderRadius: 2 },
     typography: {
-      fontFamily: '"MetroLight", "Helvetica", "Arial", sans-serif',
+      fontFamily: '"AlbertSans-Light", sans-serif',
       // fontFamily: '"Mulish", "Helvetica", "Arial", sans-serif',
       // @see docs typography.md
       h1: {
-        fontFamily: '"MediumFont", "Helvetica", "Arial", sans-serif',
+        fontFamily: '"AlbertSans-Black", sans-serif',
         ...fontSize(28, 64),
         fontWeight: 700,
         fontVariationSettings: "'wght' 660",
         lineHeight: 1.22,
       },
       h2: {
+        fontFamily: '"AlbertSans-Regular", sans-serif',
         ...fontSize(25, 40),
-        fontWeight: 700,
+        fontWeight: 400,
         fontVariationSettings: "'wght' 630",
         lineHeight: 1.35,
       },
       h3: {
+        fontFamily: '"AlbertSans-SemiBold", sans-serif',
         ...fontSize(22, 30),
-        fontWeight: 700,
+        fontWeight: 600,
         fontVariationSettings: "'wght' 660",
         lineHeight: 1.55,
       },
       h4: {
+        fontFamily: '"AlbertSans-Bold", sans-serif',
         ...fontSize(18, 26),
         fontWeight: 550,
         fontVariationSettings: "'wght' 550",
         lineHeight: 1.55,
       },
       h5: {
+        fontFamily: '"AlbertSans-Medium", sans-serif',
         ...fontSize(17, 20),
         fontWeight: 650,
         fontVariationSettings: "'wght' 650",
@@ -158,15 +163,15 @@ const createThemeWithPalette = (palette: PaletteOptions) =>
       },
       caption: {
         // https://web.dev/font-size/#how-the-lighthouse-font-size-audit-fails
-        ...fontSize(12, 13),
+        ...fontSize(12, 14),
       },
       button: {},
       overline: {
         // https://web.dev/font-size/#how-the-lighthouse-font-size-audit-fails
-        ...fontSize(14, 16),
-        fontWeight: 500,
-        letterSpacing: 1,
-        lineHeight: 1.2,
+        ...fontSize(12, 14),
+        // fontWeight: 500,
+        letterSpacing: 1.1,
+        lineHeight: 1.1,
         textTransform: 'uppercase',
       },
     },
@@ -189,6 +194,7 @@ const createThemeWithPalette = (palette: PaletteOptions) =>
       appBarHeightMd: '100px',
       appBarInnerHeightMd: '80px',
     },
+    
   })
 
 // todo: move most of the styles to the graphcommerce library while still allowing for extensibility.
@@ -259,13 +265,29 @@ const createOverrides = (theme: Theme): Components<Theme> => ({
       {
         props: { variant: 'contained' },
         style: {
+
           textTransform: 'uppercase',
-          letterSpacing: '0.12rem',
+          letterSpacing: '0.1em',
+          fontSize: '14px',
+          fontWeith: '400',
+          ...breakpointVal(
+            'borderRadius',
+            theme.shape.borderRadius * 2,
+            theme.shape.borderRadius * 3,
+            theme.breakpoints.values,
+          ),
         },
       },
       {
         props: { variant: 'contained', color: 'inherit' },
-        style: { backgroundColor: theme.palette.background.paper },
+        style: { backgroundColor: theme.palette.background.paper,
+          ...breakpointVal(
+            'borderRadius',
+            theme.shape.borderRadius * 2,
+            theme.shape.borderRadius * 3,
+            theme.breakpoints.values,
+          ),
+         },
       },
       {
         props: { variant: 'outlined' },
@@ -291,6 +313,12 @@ const createOverrides = (theme: Theme): Components<Theme> => ({
         style: {
           '&:not(.Mui-disabled)': {
             boxShadow: 'none',
+            ...breakpointVal(
+              'borderRadius',
+              theme.shape.borderRadius * 2,
+              theme.shape.borderRadius * 3,
+              theme.breakpoints.values,
+            ),
           },
         },
       },
@@ -299,6 +327,12 @@ const createOverrides = (theme: Theme): Components<Theme> => ({
         style: {
           '&:not(.Mui-disabled)': {
             boxShadow: 'none',
+            ...breakpointVal(
+              'borderRadius',
+              theme.shape.borderRadius * 2,
+              theme.shape.borderRadius * 3,
+              theme.breakpoints.values,
+            ),
           },
         },
       },

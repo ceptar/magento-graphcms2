@@ -13,7 +13,7 @@ export type LayoutOverlayProps = Omit<
 >
 
 export function LayoutOverlay(props: LayoutOverlayProps) {
-  const { children, variantSm = 'bottom', variantMd = 'right', ...otherProps } = props
+  const { children, variantSm = 'bottom', variantMd = 'left', ...otherProps } = props
 
   const { closeSteps, active, direction } = usePageContext()
   const onCloseHandler = useGo(closeSteps * -1)

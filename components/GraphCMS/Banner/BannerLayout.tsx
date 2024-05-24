@@ -53,6 +53,7 @@ export function BannerLayout(props: BannerLayoutProps) {
             textAlign: 'left',
             // p: theme.spacings.md,
             color: theme.palette.secondary.contrastText,
+
           })}
         >
           {children}

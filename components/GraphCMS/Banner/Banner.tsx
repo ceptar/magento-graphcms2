@@ -59,15 +59,18 @@ export function RowHeroBannerCopy (props: RowHeroBannerCopyFragment) {
             typography: 'overline',
           },
           'heading-one': (theme) => ({
-            // backgroundColor: '#32d6ea99',
             paddingBottom: '10vh',
             textTransform: 'uppercase',
+
             mt: 1,
             mb: theme.spacings.sm,
             ...breakpointVal('fontSize', 42, 88, theme.breakpoints.values),
+
             '& strong': {
               WebkitTextFillColor: 'transparent',
               WebkitTextStroke: `1.2px #fff`,
+              backgroundColor: { background: (theme.palette.primary.main, 0.6) },
+              // backgroundOpacity: '0.5',
             },
           }),
         }}

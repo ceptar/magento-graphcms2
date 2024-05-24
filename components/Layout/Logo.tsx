@@ -6,14 +6,14 @@ export function Logo() {
   return (
     <LogoBase
 
-    // href='/'
+   href='/'
     sx={(theme) => ({
 
         '& .GcLogo-logo': {
           display: 'flex',
-          minHeight: '40px',
+          minHeight: '50px',
           // maxHeight: '60px',
-          maxWidth: '50vw',
+          maxWidth: '40vw',
           height: 'auto',
           width: 'auto',
           justifyContent: 'space-between',
@@ -24,7 +24,7 @@ export function Logo() {
 
             
           
-          // filter: (theme) => (theme.palette.mode === 'dark' ?  'none' : 'invert(100%)'),
+          filter: (theme) => (theme.palette.mode === 'dark' ?  'none' : 'invert(100%)'),
         },
 
 
