@@ -8,7 +8,7 @@
 const config = {
   hygraphEndpoint: 'https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clvhbhb63000009ieecbl2zt3/master',
   magentoEndpoint: 'https://nonotheresnolimit.xyz/graphql',
-  canonicalBaseUrl: 'https://localhost/',
+  canonicalBaseUrl: 'https://shop.nonotheresnolimit.xyz/',
   storefront: [
     { locale: 'en', magentoStoreCode: 'default', defaultLocale: true },
   ],
